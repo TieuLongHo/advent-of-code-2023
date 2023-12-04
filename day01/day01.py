@@ -3,7 +3,7 @@ import re
 
 def part1():
     sum = 0
-    with open("1.txt", "r") as f:
+    with open("day01/input.txt", "r") as f:
         lines = f.read().splitlines()
         for line in lines:
             digits = re.sub(r"\D", "", line)
@@ -32,7 +32,7 @@ def part2():
             text = text.replace(i, j)
         return text
 
-    file = open("1.txt", "r")
+    file = open("day01/input.txt", "r")
     lines = file.readlines()
     for line in lines:
         for key, value in digits_string.items():
@@ -43,5 +43,6 @@ def part2():
     print("Part 2: " + str(sum))
 
 
+print("Advent of Code: Day 01")
 part1()
 part2()

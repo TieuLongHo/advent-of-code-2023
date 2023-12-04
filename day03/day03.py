@@ -5,7 +5,7 @@ symbols = {}
 
 
 def repair():
-    with open("3.txt", "r") as file:
+    with open("day03/input.txt", "r") as file:
         lines = file.read().splitlines()
 
         for i, line in enumerate(lines):
@@ -62,7 +62,7 @@ def adding(number: int) -> None:
 
 
 def gear():
-    with open("3.txt", "r") as file:
+    with open("day03/input.txt", "r") as file:
         lines = file.read().splitlines()
         stars = []
 
@@ -143,6 +143,7 @@ def find_endpoints(string: str, pos: int) -> tuple:
     return (start, end)
 
 
+print("Advent of Code: Day 03")
 repair()
 print(f"Part 1: {sum}")
 sum = 0

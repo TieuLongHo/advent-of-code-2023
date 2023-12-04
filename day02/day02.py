@@ -1,6 +1,6 @@
 def part1():
     sum = 0
-    with open("2.txt", "r") as f:
+    with open("day02/input.txt", "r") as f:
         lines = f.read().splitlines()
         red = 12
         green = 13
@@ -40,7 +40,7 @@ def part1():
 
 def part2():
     sum = 0
-    with open("2.txt", "r") as f:
+    with open("day02/input.txt", "r") as f:
         lines = f.read().splitlines()
         for line in lines:
             red = 0
@@ -67,5 +67,6 @@ def part2():
     print(f"Part 2: {sum}")
 
 
+print("Advent of Code: Day 02")
 part1()
 part2()

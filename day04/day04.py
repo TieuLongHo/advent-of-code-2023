@@ -1,6 +1,6 @@
 def part1():
     sum = 0
-    with open("4.txt") as f:
+    with open("day04/input.txt") as f:
         data = f.read().splitlines()
         for d in data:
             win_num, card_num = d.split(":")[1].split("|")
@@ -21,7 +21,7 @@ def part1():
 def part2():
     sum_cards = 0
     card_amount = {}
-    with open("4.txt") as f:
+    with open("day04/input.txt") as f:
         data = f.read().splitlines()
         for i, d in enumerate(data):
             win_num, card_num = d.split(":")[1].split("|")
@@ -46,5 +46,6 @@ def part2():
     print(f"Part 2 : {sum_cards}")
 
 
+print("Advent of Code: Day 04")
 part1()
 part2()
