@@ -27,6 +27,11 @@ def part2():
         "zero": "z0ero",
     }
 
+    def replace_all(text, dic):
+        for i, j in dic.items():
+            text = text.replace(i, j)
+        return text
+
     file = open("1.txt", "r")
     lines = file.readlines()
     for line in lines:
