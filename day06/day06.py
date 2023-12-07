@@ -1,4 +1,5 @@
 import os
+import math
 
 
 def part1(data: list) -> None:
@@ -17,11 +18,29 @@ def part1(data: list) -> None:
                 if (time - j) * j < distance:
                     ranges[i][1] = j - 1
                     break
+    print(ranges)
 
     for points in ranges:
         result *= points[1] - points[0] + 1
 
     print(f"Part 1: {result}")
+
+
+def math_part1(data: list) -> None:
+    ranges = []
+    result = 1
+    for i, race in enumerate(data[0]):
+        time = data[0][i]
+        distance = data[1][i]
+        d = (time**2) - (4 * distance)
+
+        sol1 = (-time - math.sqrt(d)) / (-2)
+        sol2 = (-time + math.sqrt(d)) / (-2)
+
+        ranges.append([math.ceil(sol2), math.floor(sol1)])
+    for points in ranges:
+        result *= points[1] - points[0] + 1
+    print(f"Part 1 with quadratic formula: {result}")
 
 
 def part2(data: list) -> None:
@@ -57,3 +76,4 @@ if __name__ == "__main__":
 
         part1(races)
         part2(races)
+        math_part1(races)
